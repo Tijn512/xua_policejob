@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mn-policejob</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wapenkamer">
+            <div class="sec-center"> 	
+                <input class="dropdown" type="checkbox" id="dropdown" name="dropdown"/>
+                <label class="for-dropdown" for="dropdown">WapenKamer <i class="uil uil-arrow-down"></i></label>
+                <div class="section-dropdown"> 
+                    <a id="pakcombatpistol">Combat Pistol<i class="uil uil-arrow-right"></i></a>
+                    <a id="paktaser">Taser<i class="uil uil-arrow-right"></i></a>
+                    <a id="pakwapenstok">Wapenstok <i class="uil uil-arrow-right"></i></a>
+                    <a id="pakzaklamp">Zaklamp <i class="uil uil-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aangiftescherm">
+        <div class="header">
+            <ul class="headerul">
+                <li class="nav-item"><img src="./img/icon.png" width="32" height="32" alt=""/></li>
+                <li class="nav-item">Politie Atlantis</br> Aangifte Systeem</li>
+                <li class="nav-item-back">Welkom Manius</li>
+            </ul>
+        </div>
+
+        <div class="aangiftescontainer">
+        </div>
+    </div>
+
+    <div class="aangiftescherm-specifiek">
+        <div class="header">
+            <ul class="headerul">
+                <li class="nav-item"><img src="./img/icon.png" width="32" height="32" alt=""/></li>
+                <li class="nav-item">Politie Atlantis</br> Aangifte Systeem</li>
+                <li class="nav-item-back">Welkom Manius</li>
+            </ul>
+        </div>
+        
+        <div class="aangifte-invulvelden">
+            <img src="./img/pv_logo.png" alt="" width="300px" height="100px" style="display: block; margin-left: auto; margin-right: auto; ; margin-top: 100px;">
+            <h1 class="titel-aangifte" id="id-aangifte">Aangifte Rapport #005</h1>
+            <ul>
+                <li class="liinput">Opgemaakt door:<input class="invoervelden-aangifte" id="opgemaakdoor" type="text" placeholder="MN" readonly></input></li>
+                <li class="liinput">Datum:<input class="invoervelden-aangifte" id="datum" type="text" placeholder="14/07/2021" style="margin-left: 182px;" readonly></input></li>
+                <li class="liinput">Beschrijving: </br><textarea class="invoervelden-aangifte-big" id="Beschrijvingaangifte"  style="margin-top: 25px; font-size: large;" readonly></textarea></li>
+                <li class="liinput"></br><input class="invoervelden-aangifte" type="hidden" id="hiddenid" style="margin-left: 182px;" readonly></input></li>
+            </ul>
+            <button id="deleteaangifte" style="margin-left: 41%; padding: 10px; background-color: #004682; border-radius: 10px; color: white;   font-family: 'Acrom-Bold';">Aangifte Rapport Verwijderen</button>
+        </div>
+    </div>
+
+
+    <div class="aangiftescherm-aanmaken">
+        <div class="header">
+            <ul class="headerul">
+                <li class="nav-item"><img src="./img/icon.png" width="32" height="32" alt=""/></li>
+                <li class="nav-item">Politie Atlantis</br> Aangifte Systeem</li>
+                <li class="nav-item-back">Welkom Manius</li>
+            </ul>
+        </div>
+        
+        <div class="aangifte-invulvelden">
+            <img src="./img/pv_logo.png" alt="" width="300px" height="100px" style="display: block; margin-left: auto; margin-right: auto; ; margin-top: 100px;">
+            <h1 class="titel-aangifte" id="id-aangifte">Nieuw Rapport aanmaken</h1>
+            <ul>
+                <li class="liinput">Eigen naam:<input style="margin-left: 170px;" class="invoervelden-aangifte" id="eigennaam" type="text" placeholder="Eigen naam" ></input></li>
+                <li class="liinput">Naam Aangever:<input style="margin-left: 136px;" class="invoervelden-aangifte" id="aangevernaam" type="text" placeholder="Naam aangever" ></input></li>
+                <li class="liinput">Onderwerp:<input class="invoervelden-aangifte" id="onderwerpnieuw" type="text" placeholder="Vul hier het onderwerp in..." style="margin-left: 176px;" ></input></li>
+                <li class="liinput">Beschrijving: </br><textarea class="invoervelden-aangifte-big" id="Beschrijvingaangifte2"  style="margin-top: 25px; font-size: large;" ></textarea></li>
+            </ul>
+            <input class="deleteaangifte" type="button" style="margin-left: 41%; padding: 10px; background-color: #004682; border-radius: 10px; color: white;   font-family: 'Acrom-Bold';" value="Aangifte Rapport Toevoegen"></input>
+        </div>
+    </div>
+
+    <div class="inbeslagname-voertuig">
+        <div class="header">
+            <ul class="headerul">
+                <li class="nav-item"><img src="./img/icon.png" width="32" height="32" alt=""/></li>
+                <li class="nav-item">Politie Atlantis</br> Inbeslagname</li>
+            </ul>
+        </div>
+        
+        <h4 style="font-family: 'Acrom-Bold'; text-align: center; font-size: x-large;">Voertuig Inbeslagname</h4>
+
+        <ul>
+            <li style="list-style-type: none; margin-bottom: 10px;"><p style="font-family: 'Acrom-Bold';">Model:<input id="model" type="text" placeholder="Model" style="margin-left: 100px; font-family: 'Acrom-Bold';"></p></li>
+            <li style="list-style-type: none; margin-bottom: 10px;"><p style="font-family: 'Acrom-Bold';">Eigenaar:<input id="eigenaar" type="text" placeholder="Eigenaar" style="margin-left: 76px; font-family: 'Acrom-Bold';"></p></li>
+            <li class="liinput"><input class="invoervelden-aangifte" type="hidden" id="hiddenidentifier" readonly></input></li>
+            <li style="list-style-type: none; margin-bottom: 10px;"><p style="font-family: 'Acrom-Bold';">Kenteken:<input id="kenteken" type="text" placeholder="Kenteken" style="margin-left: 73px; font-family: 'Acrom-Bold';"></p><p style="font-family: 'Acrom-Bold';">Reden:</p></li>
+
+        </ul>
+        <textarea style="margin-left: 40px; width: 80%; height: 100px;" class="voertuigreden"  id="voertuigreden"></textarea>
+        <input id="neemvoertuiginbeslag" type="button" style="margin-left: 41%; padding: 10px; background-color: #004682; border-radius: 10px; color: white;   font-family: 'Acrom-Bold';" value="Voertuig in beslagnemen"></input>
+    </div>
+
+
+
+    
+</body>
+<script src="./main.js"></script>
+</html>
